@@ -3,6 +3,13 @@
 // Exact match to Reference Visuals & Structure
 // ==========================================================================
 
+export const assetPath = (path) => {
+  if (!path) return ''
+  if (path.startsWith('http://') || path.startsWith('https://')) return path
+  if (path.startsWith(import.meta.env.BASE_URL)) return path
+  return `${import.meta.env.BASE_URL}${path.replace(/^\.?\//, '')}`
+}
+
 export const PRODUCTS = [
   {
     id: 'prod-001',
@@ -56,7 +63,7 @@ export const PRODUCTS = [
     categories: ['Blazers', 'Jeans'],
     tags: ['casual-layers', 'daily-comfort'],
     images: [
-      '/images/products/golf-muse.jpg',
+      assetPath('/images/products/golf-muse.jpg'),
       'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800&auto=format&fit=crop'
     ],
     shortDescription: 'Tailored athletic resort crop top and skirt set engineered for movement and sunlit comfort.',
@@ -147,7 +154,7 @@ export const PRODUCTS = [
     categories: ['Dresses', 'T-Shirts'],
     tags: ['summer-essential', 'wrap-dress'],
     images: [
-      '/images/products/shop-1.jpg',
+      assetPath('/images/products/shop-1.jpg'),
       'https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=800&auto=format&fit=crop'
     ],
     shortDescription: 'Airy patterned kimono wrap dress with wide bell sleeves and fluid asymmetrical hemline.',

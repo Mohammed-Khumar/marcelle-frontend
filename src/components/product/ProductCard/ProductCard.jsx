@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { Heart, ShoppingBag } from 'lucide-react'
 import RatingStars from '../../common/RatingStars/RatingStars'
 import Badge from '../../common/Badge/Badge'
+import { assetPath } from '../../../data/products'
 import './ProductCard.css'
 
 export default function ProductCard({
@@ -29,8 +30,8 @@ export default function ProductCard({
     images = []
   } = product
 
-  const primaryImage = images[0] || ''
-  const secondaryImage = images[1] || images[0] || ''
+  const primaryImage = assetPath(images[0])
+  const secondaryImage = assetPath(images[1] || images[0])
 
   const handleWishlistClick = (e) => {
     e.preventDefault()

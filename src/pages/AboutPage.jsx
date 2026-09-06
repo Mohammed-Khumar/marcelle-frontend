@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Sparkles, Leaf, Compass, ShieldCheck, ArrowRight } from 'lucide-react'
+import { assetPath } from '../data/products'
 import './AboutPage.css'
 
 export default function AboutPage() {
@@ -34,7 +35,7 @@ export default function AboutPage() {
           <div className="about-story-grid">
             <div className="about-story-image-wrap">
               <img 
-                src="./images/products/golf-muse.jpg" 
+                src={assetPath('/images/products/golf-muse.jpg')} 
                 alt="MARCELLE Mediterranean Atelier and Resort Collection" 
                 className="about-story-img"
                 onError={(e) => {

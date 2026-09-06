@@ -8,7 +8,7 @@ import {
   ShieldCheck, 
   Check 
 } from 'lucide-react'
-import { PRODUCTS } from '../data/products'
+import { PRODUCTS, assetPath } from '../data/products'
 import ProductCard from '../components/product/ProductCard/ProductCard'
 import RatingStars from '../components/common/RatingStars/RatingStars'
 import './ProductPage.css'
@@ -56,9 +56,9 @@ export default function ProductPage() {
   }, [toastMessage])
 
   // Gallery images with fallback
-  const images = product.images?.length > 0 
+  const images = (product.images?.length > 0 
     ? product.images 
-    : ['https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800&auto=format&fit=crop']
+    : ['https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800&auto=format&fit=crop']).map(assetPath)
 
   const activeImage = images[activeImageIndex] || images[0]
 
