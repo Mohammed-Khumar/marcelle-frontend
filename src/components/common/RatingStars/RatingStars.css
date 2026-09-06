@@ -1,0 +1,26 @@
+/* ==========================================================================
+   RATING STARS COMPONENT STYLES
+   ========================================================================== */
+
+.rating-stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.rating-star-icon {
+  display: inline-block;
+  color: var(--color-rating);
+  transition: transform var(--transition-fast);
+}
+
+.rating-star-icon.empty {
+  color: var(--color-rating-empty);
+}
+
+.rating-text {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  color: var(--color-text-secondary);
+  margin-left: 6px;
+}

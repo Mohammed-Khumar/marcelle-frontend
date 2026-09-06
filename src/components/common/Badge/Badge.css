@@ -1,0 +1,40 @@
+/* ==========================================================================
+   BADGE COMPONENT STYLES
+   ========================================================================== */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+}
+
+.badge-sale {
+  background-color: var(--color-sale);
+  color: var(--color-text-inverse);
+}
+
+.badge-stock {
+  background-color: rgba(139, 189, 110, 0.18);
+  color: #3b7428;
+}
+
+.badge-category {
+  background-color: var(--color-bg-subtle);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+}
+
+.badge-outline {
+  background-color: transparent;
+  color: var(--color-text-main);
+  border: 1px solid var(--color-border);
+}

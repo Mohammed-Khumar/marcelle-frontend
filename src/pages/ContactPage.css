@@ -1,0 +1,462 @@
+/* ==========================================================================
+   CONTACT PAGE STYLES — MARCELLE
+   Luxury Mediterranean Concierge & Ateliers
+   ========================================================================== */
+
+.contact-page-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-light-surface);
+}
+
+/* ==========================================================================
+   1. HERO BANNER
+   ========================================================================== */
+.contact-hero-banner {
+  background-color: #F8F7F4;
+  border-bottom: 1px solid var(--color-border);
+  padding-top: 130px;
+  padding-bottom: 56px;
+  position: relative;
+}
+
+.contact-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  color: var(--color-text-secondary);
+  margin-bottom: 14px;
+}
+
+.contact-breadcrumbs a {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.contact-breadcrumbs a:hover {
+  color: var(--color-primary);
+}
+
+.contact-hero-eyebrow {
+  display: block;
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #888888;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.contact-hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  font-weight: 400;
+  color: var(--color-text-main);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 14px;
+  max-width: 820px;
+}
+
+.contact-hero-subtitle {
+  font-family: var(--font-body);
+  font-size: var(--fs-md);
+  color: var(--color-text-secondary);
+  max-width: 700px;
+  line-height: 1.65;
+}
+
+/* ==========================================================================
+   2. MAIN CONTACT SECTION (SPLIT GRID)
+   ========================================================================== */
+.contact-main-section {
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-16);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: var(--space-12);
+  align-items: flex-start;
+}
+
+@media (max-width: 992px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+}
+
+/* Left Info Column */
+.contact-info-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.contact-section-label {
+  font-family: var(--font-heading);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #888888;
+  margin-bottom: var(--space-2);
+}
+
+.contact-info-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+  font-weight: 400;
+  color: var(--color-text-main);
+  line-height: 1.2;
+  margin-bottom: var(--space-3);
+  letter-spacing: -0.01em;
+}
+
+.contact-info-desc {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  color: #666666;
+  line-height: 1.65;
+}
+
+.contact-response-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #F2EFE9;
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  color: var(--color-text-main);
+  width: fit-content;
+}
+
+.contact-response-dot {
+  width: 7px;
+  height: 7px;
+  background-color: #27AE60;
+  border-radius: 50%;
+}
+
+/* Atelier Cards */
+.contact-ateliers {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.atelier-card {
+  background-color: #FAF9F6;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: var(--space-6);
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.atelier-card:hover {
+  transform: translateY(-2px);
+  border-color: #D5D0C7;
+}
+
+.atelier-city {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--color-text-main);
+  margin-bottom: 4px;
+}
+
+.atelier-type {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #888888;
+  margin-bottom: var(--space-4);
+  display: block;
+}
+
+.atelier-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.atelier-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  color: #555555;
+  line-height: 1.5;
+}
+
+.atelier-icon {
+  color: var(--color-text-main);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.atelier-row a {
+  color: var(--color-text-main);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.atelier-row a:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+/* Right Form Column */
+.contact-form-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: var(--space-10);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+@media (max-width: 600px) {
+  .contact-form-card {
+    padding: var(--space-6);
+  }
+}
+
+.contact-form-header {
+  margin-bottom: var(--space-6);
+}
+
+.contact-form-header h3 {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: var(--color-text-main);
+  margin-bottom: 6px;
+}
+
+.contact-form-header p {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  color: var(--color-text-secondary);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.form-row-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+@media (max-width: 600px) {
+  .form-row-2col {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  color: var(--color-text-main);
+}
+
+.form-label span.req {
+  color: #D9534F;
+  margin-left: 2px;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  padding: 12px 14px;
+  background-color: #FAFAFA;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-main);
+  transition: border-color var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast);
+  outline: none;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: #000000;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 0 1px #000000;
+}
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23222222' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 14px;
+  padding-right: 36px;
+  cursor: pointer;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-submit-btn {
+  background-color: #000000;
+  color: #FFFFFF;
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 14px 28px;
+  font-family: var(--font-heading);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+  margin-top: var(--space-2);
+}
+
+.contact-submit-btn:hover {
+  background-color: #333333;
+  transform: translateY(-1px);
+}
+
+.contact-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Success state banner */
+.contact-success-banner {
+  background-color: #F0F7F2;
+  border: 1px solid #C3E6CB;
+  border-radius: var(--radius-sm);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+  align-items: center;
+}
+
+.contact-success-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  color: #155724;
+  font-weight: 600;
+}
+
+.contact-success-desc {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  color: #385D3F;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   3. ACCORDION FAQ SECTION
+   ========================================================================== */
+.contact-faq-section {
+  background-color: #F8F7F4;
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-16);
+  border-top: 1px solid var(--color-border);
+}
+
+.contact-faq-header {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto var(--space-10) auto;
+}
+
+.contact-faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.faq-item {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  transition: border-color var(--transition-fast);
+}
+
+.faq-item.is-open {
+  border-color: #111111;
+}
+
+.faq-question-btn {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.faq-question-text {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--color-text-main);
+  line-height: 1.35;
+}
+
+.faq-chevron {
+  color: #777777;
+  transition: transform var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.faq-item.is-open .faq-chevron {
+  transform: rotate(180deg);
+  color: var(--color-text-main);
+}
+
+.faq-answer {
+  padding: 0 24px 22px 24px;
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  color: #555555;
+  line-height: 1.7;
+  border-top: 1px dashed var(--color-border);
+  padding-top: 16px;
+}
